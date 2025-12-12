@@ -1,0 +1,41 @@
+/* Pelago - Sans Serif */
+@font-face {
+  font-family: "Pelago";
+  src: url("/fonts/pelago-regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Albertus Nova - Serif */
+@font-face {
+  font-family: "Albertus Nova";
+  src: url("/fonts/Albertus-Nova-thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Albertus Nova";
+  src: url("/fonts/Albertus-Nova-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Albertus Nova";
+  src: url("/fonts/Albertus-Nova-W07-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Albertus Nova";
+  src: url("/fonts/Albertus-Nova-black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

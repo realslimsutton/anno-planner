@@ -1,0 +1,9 @@
+{
+  "version": "0.13",
+  "timestamp": "2025-12-03T19:54:33.373Z",
+  "assets": "data/assets.json",
+  "translations": {
+    "en": "data/translations/en.json",
+    "de": "data/translations/de.json"
+  }
+}
