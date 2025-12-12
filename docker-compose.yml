@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
