@@ -11,11 +11,9 @@ import {
   unique,
 } from "drizzle-orm/pg-core";
 
-import { REGION_IDS } from "@/lib/constants";
-
 const createTable = pgTableCreator((name) => `anno-planner_${name}`);
 
-export const regionEnum = pgEnum("region", REGION_IDS);
+export const regionEnum = pgEnum("region", ["3225", "6626"]);
 
 export type DatabaseBuilding = {
   id: string;

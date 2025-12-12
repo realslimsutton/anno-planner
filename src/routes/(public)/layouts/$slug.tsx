@@ -108,7 +108,7 @@ function PageBreadcrumb() {
 }
 
 function PageTitle() {
-  const { hash } = Route.useRouteContext();
+  const { hash, auth } = Route.useRouteContext();
   const { data } = useSuspenseQuery(layoutQueries.getLayoutByHash(hash));
   const queryClient = useQueryClient();
 
@@ -167,13 +167,23 @@ function PageTitle() {
       </h1>
       <div className="flex items-center gap-3">
         <Button asChild>
-          <Link
-            to="/layouts/$slug/editor"
-            params={{ slug: getLayoutSlug(data.layout.title, hash) }}
-          >
-            <ExternalLink className="mr-2 h-4 w-4" />
-            Open in Editor
-          </Link>
+          {auth?.id && Number(auth.id) === data.layout.authorId ? (
+            <Link
+              to="/layouts/$slug/editor"
+              params={{ slug: getLayoutSlug(data.layout.title, hash) }}
+            >
+              <ExternalLink className="mr-2 h-4 w-4" />
+              Open in Editor
+            </Link>
+          ) : (
+            <Link
+              to="/layouts/$slug/preview"
+              params={{ slug: getLayoutSlug(data.layout.title, hash) }}
+            >
+              <ExternalLink className="mr-2 h-4 w-4" />
+              Preview
+            </Link>
+          )}
         </Button>
         <Button variant="outline" size="icon" className="bg-transparent">
           <Link2 className="h-4 w-4" />
