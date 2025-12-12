@@ -20,7 +20,7 @@ RUN pnpm install --frozen-lockfile
 COPY . .
 
 # Build TanStack Start if your project has a build step
-RUN pnpm run build --if-present
+RUN pnpm run build
 
 # Install Playwright browsers (Chromium) into the image
 RUN pnpm exec playwright install chromium --with-deps
