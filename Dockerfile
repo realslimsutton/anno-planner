@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/playwright:jammy
 
 # Install Node 22 (Playwright image may not ship with Node 22)
 RUN apt-get update && apt-get install -y curl ca-certificates \
-  && curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
+  && curl -fsSL https://deb.nodesource.com/setup_24.x | bash - \
   && apt-get install -y nodejs \
   && rm -rf /var/lib/apt/lists/*
 
